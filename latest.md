@@ -1,14 +1,14 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-01 14:50 CEST**. Zakres: od początku każdego źródła **do 2026-09-30 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-01 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-01 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|
-| `daily_quotes` | 1987-01-02 | 2026-09-30 | 10,101 | 1,827,989 | 59 | 1 |
-| `aktualne_kursy` | 2025-08-28 | 2026-09-30 | 176 | 2,715,604 | 0 | 2 |
-| `statica_trades` | 2026-09-16 | 2026-09-30 | 11 | 2,677,732 | 0 | 1 |
+| `daily_quotes` | 1987-01-02 | 2026-10-01 | 10,102 | 1,828,391 | 59 | 1 |
+| `aktualne_kursy` | 2025-08-28 | 2026-10-01 | 177 | 2,716,230 | 0 | 2 |
+| `statica_trades` | 2026-09-16 | 2026-10-01 | 12 | 2,934,530 | 0 | 1 |
 
 **Interpretacja:** „błąd” oznacza wartości naruszające podstawowe reguły źródła; „ostrzeżenie” oznacza lukę lub odstępstwo wymagające oceny. Brak błędów nie certyfikuje wykonalności transakcji ani poprawności każdego instrumentu.
 
@@ -60,12 +60,12 @@ Wygenerowano: **2026-10-01 14:50 CEST**. Zakres: od początku każdego źródła
 | 2023 | 250 | 96,173 | 0 | 0 |
 | 2024 | 249 | 92,296 | 0 | 0 |
 | 2025 | 249 | 95,945 | 25 | 5,368 |
-| 2026 | 189 | 75,999 | 0 | 6,207 |
+| 2026 | 190 | 76,401 | 0 | 6,240 |
 
 ### `aktualne_kursy`
 
 - **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 98 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
-- **OSTRZEŻENIE:** 5 sesji ma <80% mediany liczby zajętych przedziałów (43); pierwsze: 2025-11-18: 31, 2025-11-24: 10, 2025-12-10: 22, 2026-01-27: 2, 2026-06-08: 11. Krótka sesja lub inny harmonogram mogą być poprawne.
+- **OSTRZEŻENIE:** 6 sesji ma <80% mediany liczby zajętych przedziałów (43); pierwsze: 2025-11-18: 31, 2025-11-24: 10, 2025-12-10: 22, 2026-01-27: 2, 2026-06-08: 11, 2026-10-01: 2. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Bez transakcji* |
 |---|---:|---:|---:|---:|
@@ -81,6 +81,7 @@ Wygenerowano: **2026-10-01 14:50 CEST**. Zakres: od początku każdego źródła
 | 2026-05 | 20 | 298,646 | 0 | 0 |
 | 2026-06 | 5 | 63,295 | 0 | 0 |
 | 2026-09 | 12 | 202,798 | 0 | 0 |
+| 2026-10 | 1 | 626 | 0 | 0 |
 
 ### `statica_trades`
 
@@ -89,6 +90,7 @@ Wygenerowano: **2026-10-01 14:50 CEST**. Zakres: od początku każdego źródła
 | Okres | Sesje | Rekordy | Rekordy z błędem | Bez transakcji* |
 |---|---:|---:|---:|---:|
 | 2026-09 | 11 | 2,677,732 | 0 | 0 |
+| 2026-10 | 1 | 256,798 | 0 | 0 |
 
 ## Uzgodnienie plików transakcyjnych
 
@@ -107,6 +109,7 @@ Porównanie `statica_import_files.row_count` z liczbą zachowanych wierszy `stat
 | 2026-09-28 | 12,495 | 0 | 0 |
 | 2026-09-29 | 12,343 | 0 | 0 |
 | 2026-09-30 | 12,880 | 0 | 0 |
+| 2026-10-01 | 13,357 | 0 | 0 |
 
 ## Zakres kontroli i ograniczenia
 
