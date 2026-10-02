@@ -1,14 +1,14 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-01 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-01 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-02 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-02 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|
-| `daily_quotes` | 1987-01-02 | 2026-10-01 | 10,102 | 1,828,391 | 59 | 1 |
-| `aktualne_kursy` | 2025-08-28 | 2026-10-01 | 177 | 2,716,230 | 0 | 2 |
-| `statica_trades` | 2026-09-16 | 2026-10-01 | 12 | 2,934,530 | 0 | 1 |
+| `daily_quotes` | 1987-01-02 | 2026-10-02 | 10,103 | 1,828,793 | 59 | 1 |
+| `aktualne_kursy` | 2025-08-28 | 2026-10-01 | 177 | 2,716,230 | 0 | 3 |
+| `statica_trades` | 2026-09-16 | 2026-10-01 | 12 | 2,934,530 | 0 | 2 |
 
 **Interpretacja:** „błąd” oznacza wartości naruszające podstawowe reguły źródła; „ostrzeżenie” oznacza lukę lub odstępstwo wymagające oceny. Brak błędów nie certyfikuje wykonalności transakcji ani poprawności każdego instrumentu.
 
@@ -60,12 +60,13 @@ Wygenerowano: **2026-10-01 21:00 CEST**. Zakres: od początku każdego źródła
 | 2023 | 250 | 96,173 | 0 | 0 |
 | 2024 | 249 | 92,296 | 0 | 0 |
 | 2025 | 249 | 95,945 | 25 | 5,368 |
-| 2026 | 190 | 76,401 | 0 | 6,240 |
+| 2026 | 191 | 76,803 | 0 | 6,278 |
 
 ### `aktualne_kursy`
 
 - **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 98 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 - **OSTRZEŻENIE:** 6 sesji ma <80% mediany liczby zajętych przedziałów (43); pierwsze: 2025-11-18: 31, 2025-11-24: 10, 2025-12-10: 22, 2026-01-27: 2, 2026-06-08: 11, 2026-10-01: 2. Krótka sesja lub inny harmonogram mogą być poprawne.
+- **OSTRZEŻENIE:** Brak danych dla 2026-10-02, choć inne źródło ma tę datę. Możliwy spóźniony import lub różny zakres źródeł.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Bez transakcji* |
 |---|---:|---:|---:|---:|
@@ -86,6 +87,7 @@ Wygenerowano: **2026-10-01 21:00 CEST**. Zakres: od początku każdego źródła
 ### `statica_trades`
 
 - **OSTRZEŻENIE:** Rejestr plików: liczba niezgodnych plików: 348; `row_count` różni się od liczby zachowanych rekordów transakcyjnych; szczegóły poniżej. Może to być ślad historycznego czyszczenia danych.
+- **OSTRZEŻENIE:** Brak danych dla 2026-10-02, choć inne źródło ma tę datę. Możliwy spóźniony import lub różny zakres źródeł.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Bez transakcji* |
 |---|---:|---:|---:|---:|
