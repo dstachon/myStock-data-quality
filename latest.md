@@ -1,6 +1,6 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-05 14:13 CEST**. Zakres: od początku każdego źródła **do 2026-10-04 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-05 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-05 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
@@ -15,6 +15,8 @@ Wygenerowano: **2026-10-05 14:13 CEST**. Zakres: od początku każdego źródła
 **Znane wyjątki historyczne:** 34 niezmienionych rekordów `daily_quotes` jest pokazanych osobno i nie wchodzi do licznika błędów. Dokładne ID oraz pierwotne wartości są w `configs/data_quality_daily_exceptions.csv`; zmieniony rekord ponownie trafi do błędów.
 
 **Znane wyłączenia Statica:** 348 historycznych plików (282,509 usuniętych wierszy) jest pokazanych osobno, bez ostrzeżenia o bieżącej niespójności. Każdy plik jest porównywany z dokładnym stanem w `configs/data_quality_statica_known_exclusions.csv`; zmiana liczników, metadanych lub zakresu zachowanych linii ponownie uruchomi ostrzeżenie.
+
+**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-05; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
 
 ## Ustalenia według źródeł
 
