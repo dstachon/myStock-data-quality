@@ -1,12 +1,12 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-05 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-05 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-06 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-06 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki / wyłączenia | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|---:|
-| `daily_quotes` | 1987-01-02 | 2026-10-02 | 10,103 | 1,828,793 | 0 | 34 | 1 |
+| `daily_quotes` | 1987-01-02 | 2026-10-06 | 10,105 | 1,829,597 | 15 | 34 | 1 |
 | `aktualne_kursy` | 2025-08-28 | 2026-10-01 | 177 | 2,716,230 | 0 | 0 | 2 |
 | `statica_trades` | 2026-09-16 | 2026-10-01 | 12 | 2,934,530 | 0 | 348 plików | 1 |
 
@@ -16,12 +16,11 @@ Wygenerowano: **2026-10-05 21:00 CEST**. Zakres: od początku każdego źródła
 
 **Znane wyłączenia Statica:** 348 historycznych plików (282,509 usuniętych wierszy) jest pokazanych osobno, bez ostrzeżenia o bieżącej niespójności. Każdy plik jest porównywany z dokładnym stanem w `configs/data_quality_statica_known_exclusions.csv`; zmiana liczników, metadanych lub zakresu zachowanych linii ponownie uruchomi ostrzeżenie.
 
-**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-05; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
-
 ## Ustalenia według źródeł
 
 ### `daily_quotes`
 
+- **BŁĄD:** 15 rekordów z niedozwolonymi/pustymi wartościami w 2 sesjach (np. 2026-10-05: 4, 2026-10-06: 11).
 - **OSTRZEŻENIE:** 1599 dat ma najwyżej jeden symbol (zakres 1987-01-02–2015-06-04); starsza historia nie oznacza automatycznie pokrycia całego rynku.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
@@ -65,11 +64,11 @@ Wygenerowano: **2026-10-05 21:00 CEST**. Zakres: od początku każdego źródła
 | 2023 | 250 | 96,173 | 0 | 0 | 0 |
 | 2024 | 249 | 92,296 | 0 | 0 | 0 |
 | 2025 | 249 | 95,945 | 0 | 0 | 5,368 |
-| 2026 | 191 | 76,803 | 0 | 0 | 6,278 |
+| 2026 | 193 | 77,607 | 15 | 0 | 6,345 |
 
 ### `aktualne_kursy`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 99 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 101 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 - **OSTRZEŻENIE:** 6 sesji ma <80% mediany liczby zajętych przedziałów (43); pierwsze: 2025-11-18: 31, 2025-11-24: 10, 2025-12-10: 22, 2026-01-27: 2, 2026-06-08: 11, 2026-10-01: 2. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
@@ -90,7 +89,7 @@ Wygenerowano: **2026-10-05 21:00 CEST**. Zakres: od początku każdego źródła
 
 ### `statica_trades`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 1 dat (pierwsze: 2026-10-02). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 3 dat (pierwsze: 2026-10-02, 2026-10-05, 2026-10-06). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
 |---|---:|---:|---:|---:|---:|
