@@ -1,14 +1,14 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-06 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-06 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-07 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-07 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki / wyłączenia | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|---:|
-| `daily_quotes` | 1987-01-02 | 2026-10-06 | 10,105 | 1,829,597 | 15 | 34 | 1 |
+| `daily_quotes` | 1987-01-02 | 2026-10-07 | 10,106 | 1,829,999 | 18 | 34 | 1 |
 | `aktualne_kursy` | 2025-08-28 | 2026-10-01 | 177 | 2,716,230 | 0 | 0 | 2 |
-| `statica_trades` | 2026-09-16 | 2026-10-01 | 12 | 2,934,530 | 0 | 348 plików | 1 |
+| `statica_trades` | 2026-09-16 | 2026-10-07 | 16 | 4,073,554 | 0 | 348 plików | 1 |
 
 **Interpretacja:** „błąd” oznacza wartości naruszające podstawowe reguły źródła; „ostrzeżenie” oznacza lukę lub odstępstwo wymagające oceny. Brak błędów nie certyfikuje wykonalności transakcji ani poprawności każdego instrumentu.
 
@@ -20,7 +20,7 @@ Wygenerowano: **2026-10-06 21:00 CEST**. Zakres: od początku każdego źródła
 
 ### `daily_quotes`
 
-- **BŁĄD:** 15 rekordów z niedozwolonymi/pustymi wartościami w 2 sesjach (np. 2026-10-05: 4, 2026-10-06: 11).
+- **BŁĄD:** 18 rekordów z niedozwolonymi/pustymi wartościami w 3 sesjach (np. 2026-10-05: 4, 2026-10-06: 11, 2026-10-07: 3).
 - **OSTRZEŻENIE:** 1599 dat ma najwyżej jeden symbol (zakres 1987-01-02–2015-06-04); starsza historia nie oznacza automatycznie pokrycia całego rynku.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
@@ -64,11 +64,11 @@ Wygenerowano: **2026-10-06 21:00 CEST**. Zakres: od początku każdego źródła
 | 2023 | 250 | 96,173 | 0 | 0 | 0 |
 | 2024 | 249 | 92,296 | 0 | 0 | 0 |
 | 2025 | 249 | 95,945 | 0 | 0 | 5,368 |
-| 2026 | 193 | 77,607 | 15 | 0 | 6,345 |
+| 2026 | 194 | 78,009 | 18 | 0 | 6,373 |
 
 ### `aktualne_kursy`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 101 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 102 dat (pierwsze: 2025-09-05, 2025-12-11, 2025-12-12, 2025-12-15, 2025-12-16, 2025-12-17, 2025-12-18, 2025-12-19, 2025-12-22, 2025-12-23, 2025-12-29, 2025-12-30). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 - **OSTRZEŻENIE:** 6 sesji ma <80% mediany liczby zajętych przedziałów (43); pierwsze: 2025-11-18: 31, 2025-11-24: 10, 2025-12-10: 22, 2026-01-27: 2, 2026-06-08: 11, 2026-10-01: 2. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
@@ -89,12 +89,12 @@ Wygenerowano: **2026-10-06 21:00 CEST**. Zakres: od początku każdego źródła
 
 ### `statica_trades`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes`: 3 dat (pierwsze: 2026-10-02, 2026-10-05, 2026-10-06). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** 1 sesji ma <80% mediany liczby zajętych przedziałów (95); pierwsze: 2026-10-07: 48. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
 |---|---:|---:|---:|---:|---:|
 | 2026-09 | 11 | 2,677,732 | 0 | 0 | 0 |
-| 2026-10 | 1 | 256,798 | 0 | 0 | 0 |
+| 2026-10 | 5 | 1,395,822 | 0 | 0 | 0 |
 
 ## Uzgodnienie plików transakcyjnych
 
@@ -114,6 +114,7 @@ Porównanie `statica_import_files.row_count` z liczbą zachowanych wierszy `stat
 | 2026-09-29 | 12,343 | 0 | 0 | 0 | 0 |
 | 2026-09-30 | 12,880 | 0 | 0 | 0 | 0 |
 | 2026-10-01 | 13,357 | 0 | 0 | 0 | 0 |
+| 2026-10-07 | 367 | 0 | 0 | 0 | 0 |
 
 ## Zakres kontroli i ograniczenia
 
