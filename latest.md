@@ -1,59 +1,58 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-15 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-15 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-16 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-16 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki / wyłączenia | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|---:|
-| `daily_quotes_gpw` | 2000-01-03 | 2026-10-14 | 6,706 | 2,523,990 | 40,141 | 0 | 0 |
+| `daily_quotes_gpw` | 2001-01-02 | 2026-10-15 | 6,457 | 2,446,411 | 6,343 | 0 | 0 |
 | `statica_trades` | 2026-09-16 | 2026-10-07 | 16 | 4,073,554 | 0 | 348 plików | 2 |
 
 **Interpretacja:** „błąd” oznacza wartości naruszające podstawowe reguły źródła; „ostrzeżenie” oznacza lukę lub odstępstwo wymagające oceny. Brak błędów nie certyfikuje wykonalności transakcji ani poprawności każdego instrumentu.
 
 **Znane wyłączenia Statica:** 348 historycznych plików (282,509 usuniętych wierszy) jest pokazanych osobno, bez ostrzeżenia o bieżącej niespójności. Każdy plik jest porównywany z dokładnym stanem w `configs/data_quality_statica_known_exclusions.csv`; zmiana liczników, metadanych lub zakresu zachowanych linii ponownie uruchomi ostrzeżenie.
 
-**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-15; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
+**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-16; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
 
 ## Ustalenia według źródeł
 
 ### `daily_quotes_gpw`
 
-- **BŁĄD:** 40141 rekordów z niedozwolonymi/pustymi wartościami w 979 sesjach (np. 2000-01-03: 129, 2000-01-04: 128, 2000-01-05: 131, 2000-01-06: 129, 2000-01-07: 129, 2000-01-10: 125, 2000-01-11: 131, 2000-01-12: 132).
+- **BŁĄD:** 6343 rekordów z niedozwolonymi/pustymi wartościami w 698 sesjach (np. 2001-01-02: 76, 2001-01-03: 75, 2001-01-04: 80, 2001-01-05: 74, 2001-01-08: 73, 2001-01-09: 74, 2001-01-10: 78, 2001-01-11: 75).
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
 |---|---:|---:|---:|---:|---:|
-| 2000 | 250 | 55,596 | 33,693 | 0 | 589 |
-| 2001 | 250 | 57,283 | 5,679 | 0 | 6,844 |
-| 2002 | 249 | 56,429 | 260 | 0 | 12,001 |
-| 2003 | 251 | 51,926 | 141 | 0 | 7,875 |
-| 2004 | 255 | 53,539 | 46 | 0 | 3,787 |
-| 2005 | 251 | 60,827 | 33 | 0 | 2,968 |
-| 2006 | 251 | 65,163 | 7 | 0 | 1,575 |
-| 2007 | 249 | 75,959 | 14 | 0 | 1,480 |
-| 2008 | 251 | 90,162 | 22 | 0 | 4,271 |
-| 2009 | 252 | 94,422 | 35 | 0 | 3,740 |
-| 2010 | 253 | 97,049 | 46 | 0 | 3,817 |
-| 2011 | 251 | 104,253 | 50 | 0 | 4,719 |
-| 2012 | 249 | 108,441 | 52 | 0 | 8,082 |
-| 2013 | 247 | 110,044 | 19 | 0 | 7,399 |
-| 2014 | 249 | 115,390 | 0 | 0 | 9,851 |
-| 2015 | 251 | 120,651 | 0 | 0 | 12,914 |
-| 2016 | 251 | 123,077 | 0 | 0 | 14,377 |
-| 2017 | 250 | 122,397 | 0 | 0 | 14,290 |
-| 2018 | 247 | 119,085 | 0 | 0 | 19,510 |
-| 2019 | 248 | 116,729 | 0 | 0 | 21,055 |
-| 2020 | 252 | 113,837 | 0 | 0 | 14,415 |
-| 2021 | 251 | 110,936 | 0 | 0 | 9,727 |
-| 2022 | 251 | 109,993 | 0 | 0 | 12,192 |
-| 2023 | 250 | 106,463 | 0 | 0 | 10,358 |
-| 2024 | 249 | 103,486 | 0 | 0 | 10,949 |
-| 2025 | 249 | 101,058 | 0 | 0 | 10,403 |
-| 2026 | 199 | 79,795 | 44 | 0 | 6,526 |
+| 2001 | 250 | 56,579 | 5,618 | 0 | 6,681 |
+| 2002 | 249 | 55,682 | 246 | 0 | 11,665 |
+| 2003 | 251 | 51,173 | 127 | 0 | 7,591 |
+| 2004 | 255 | 52,774 | 41 | 0 | 3,609 |
+| 2005 | 251 | 60,074 | 27 | 0 | 2,815 |
+| 2006 | 251 | 64,410 | 4 | 0 | 1,511 |
+| 2007 | 249 | 75,149 | 14 | 0 | 1,480 |
+| 2008 | 251 | 89,158 | 22 | 0 | 4,220 |
+| 2009 | 252 | 93,414 | 35 | 0 | 3,715 |
+| 2010 | 253 | 96,037 | 46 | 0 | 3,780 |
+| 2011 | 251 | 103,249 | 50 | 0 | 4,648 |
+| 2012 | 249 | 107,445 | 50 | 0 | 8,071 |
+| 2013 | 247 | 109,056 | 19 | 0 | 7,387 |
+| 2014 | 249 | 114,394 | 0 | 0 | 9,797 |
+| 2015 | 251 | 119,647 | 0 | 0 | 12,872 |
+| 2016 | 251 | 122,073 | 0 | 0 | 14,321 |
+| 2017 | 250 | 121,397 | 0 | 0 | 14,264 |
+| 2018 | 247 | 118,097 | 0 | 0 | 19,434 |
+| 2019 | 248 | 115,737 | 0 | 0 | 20,725 |
+| 2020 | 252 | 112,829 | 0 | 0 | 14,335 |
+| 2021 | 251 | 109,932 | 0 | 0 | 9,717 |
+| 2022 | 251 | 108,989 | 0 | 0 | 11,934 |
+| 2023 | 250 | 105,515 | 0 | 0 | 10,190 |
+| 2024 | 249 | 102,739 | 0 | 0 | 10,924 |
+| 2025 | 249 | 100,665 | 0 | 0 | 10,200 |
+| 2026 | 200 | 80,197 | 44 | 0 | 6,560 |
 
 ### `statica_trades`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes_gpw`: 5 dat (pierwsze: 2026-10-08, 2026-10-09, 2026-10-12, 2026-10-13, 2026-10-14). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes_gpw`: 6 dat (pierwsze: 2026-10-08, 2026-10-09, 2026-10-12, 2026-10-13, 2026-10-14, 2026-10-15). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 - **OSTRZEŻENIE:** 1 sesji ma <80% mediany liczby zajętych przedziałów (95); pierwsze: 2026-10-07: 48. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
