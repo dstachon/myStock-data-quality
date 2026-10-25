@@ -1,6 +1,6 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-24 21:00 CEST**. Zakres: od początku każdego źródła **do 2026-10-24 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-25 21:00 CET**. Zakres: od początku każdego źródła **do 2026-10-25 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
