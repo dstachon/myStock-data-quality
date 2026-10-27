@@ -1,19 +1,19 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-10-26 21:00 CET**. Zakres: od początku każdego źródła **do 2026-10-26 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-10-27 21:00 CET**. Zakres: od początku każdego źródła **do 2026-10-27 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
 | Źródło | Pierwsza data | Ostatnia data | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki / wyłączenia | Ostrzeżenia |
 |---|---|---|---:|---:|---:|---:|---:|
-| `daily_quotes_gpw` | 2001-01-02 | 2026-10-23 | 6,463 | 2,448,823 | 6,343 | 0 | 0 |
+| `daily_quotes_gpw` | 2001-01-02 | 2026-10-26 | 6,464 | 2,449,225 | 6,343 | 0 | 0 |
 | `statica_trades` | 2026-09-16 | 2026-10-07 | 16 | 4,073,554 | 0 | 348 plików | 2 |
 
 **Interpretacja:** „błąd” oznacza wartości naruszające podstawowe reguły źródła; „ostrzeżenie” oznacza lukę lub odstępstwo wymagające oceny. Brak błędów nie certyfikuje wykonalności transakcji ani poprawności każdego instrumentu.
 
 **Znane wyłączenia Statica:** 348 historycznych plików (282,509 usuniętych wierszy) jest pokazanych osobno, bez ostrzeżenia o bieżącej niespójności. Każdy plik jest porównywany z dokładnym stanem w `configs/data_quality_statica_known_exclusions.csv`; zmiana liczników, metadanych lub zakresu zachowanych linii ponownie uruchomi ostrzeżenie.
 
-**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-26; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
+**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-10-27; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
 
 ## Ustalenia według źródeł
 
@@ -48,11 +48,11 @@ Wygenerowano: **2026-10-26 21:00 CET**. Zakres: od początku każdego źródła 
 | 2023 | 250 | 105,515 | 0 | 0 | 10,190 |
 | 2024 | 249 | 102,739 | 0 | 0 | 10,924 |
 | 2025 | 249 | 100,665 | 0 | 0 | 10,200 |
-| 2026 | 206 | 82,609 | 44 | 0 | 6,759 |
+| 2026 | 207 | 83,011 | 44 | 0 | 6,791 |
 
 ### `statica_trades`
 
-- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes_gpw`: 12 dat (pierwsze: 2026-10-08, 2026-10-09, 2026-10-12, 2026-10-13, 2026-10-14, 2026-10-15, 2026-10-16, 2026-10-19, 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
+- **OSTRZEŻENIE:** Brak całej sesji względem kalendarza `daily_quotes_gpw`: 13 dat (pierwsze: 2026-10-08, 2026-10-09, 2026-10-12, 2026-10-13, 2026-10-14, 2026-10-15, 2026-10-16, 2026-10-19, 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23). To kandydaci do wyjaśnienia, nie automatyczny dowód awarii.
 - **OSTRZEŻENIE:** 1 sesji ma <80% mediany liczby zajętych przedziałów (95); pierwsze: 2026-10-07: 48. Krótka sesja lub inny harmonogram mogą być poprawne.
 
 | Okres | Sesje | Rekordy | Rekordy z błędem | Znane wyjątki | Bez transakcji* |
