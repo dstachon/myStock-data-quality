@@ -1,6 +1,6 @@
 # Audyt jakości danych `stock`
 
-Wygenerowano: **2026-11-11 21:00 CET**. Zakres: od początku każdego źródła **do 2026-11-11 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
+Wygenerowano: **2026-11-12 21:00 CET**. Zakres: od początku każdego źródła **do 2026-11-12 włącznie**. Raport jest wynikiem odczytowej kontroli całej dostępnej historii w tym zakresie.
 
 ## Wynik w skrócie
 
@@ -13,7 +13,7 @@ Wygenerowano: **2026-11-11 21:00 CET**. Zakres: od początku każdego źródła 
 
 **Znane wyłączenia Statica:** 348 historycznych plików (282,509 usuniętych wierszy) jest pokazanych osobno, bez ostrzeżenia o bieżącej niespójności. Każdy plik jest porównywany z dokładnym stanem w `configs/data_quality_statica_known_exclusions.csv`; zmiana liczników, metadanych lub zakresu zachowanych linii ponownie uruchomi ostrzeżenie.
 
-**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-11-11; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
+**OSTRZEŻENIE:** żadne źródło nie ma danych dla 2026-11-12; możliwy dzień wolny od handlu albo wspólne opóźnienie importów. Wymaga potwierdzenia kalendarzem GPW.
 
 ## Ustalenia według źródeł
 
